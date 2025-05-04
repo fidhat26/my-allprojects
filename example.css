@@ -1,0 +1,57 @@
+
+body{
+    margin:0;
+    padding:0;
+}
+header{
+    width:100%;
+    height:50px;
+    display:flex;
+    justify-content: space-between;
+    position: absolute;
+}
+.second{
+    display:flex;
+    justify-content:center;
+    align-items: center;
+    gap:1rem;
+    margin-left:1rem;
+    font-style:oblique;
+}
+.third{
+    margin:1rem 1rem;
+}
+#fr{
+    margin-top:5rem;
+    border:1px solid violet;
+    height:70px;
+    width:350px;
+    padding:0.3rem;
+    outline:solid thin yellow;
+    outline-offset:5px;
+}
+#fr:hover{
+    transform:matrix(1,-0.3,0,1,0,0);
+}
+.j4{
+    border: 10px solid transparent;
+    padding: 15px;
+    border-image: url('Icons/crown.png') 30% round;
+}
+.bv{
+    height:70px;
+    width:500px;
+    transform:rotateX(150deg);
+    background-color: pink;
+    border:1px solid blue;
+    /* transition:cubic-bezier(0.23, 1, 0.320, 1); */
+}
+#jh{
+    height:70px;
+    width:500px;
+    background-color:cyan;
+    /* transition:background-color 0.5s ease; */
+}
+/* img{
+    clip-path:circle(50% at right);
+} */

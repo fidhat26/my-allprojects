@@ -1,0 +1,181 @@
+*{
+    font-family: UberMoveText , system-ui, "Helvetica Neue" , Helvetica, Arial , sans-serif;
+    margin:0;
+    padding:0;
+}
+header{
+    display:flex;
+    justify-content:space-between;
+    height:50px;
+    margin-top:0.5rem;
+    position:absolute;
+    width:100%;
+}
+.authbutton{
+    display:flex;
+    align-items:center;
+    gap:1rem;
+    margin-right:1.5rem;
+}
+.logo{
+    display:flex;
+    justify-content:center; 
+    padding:0.7rem;
+    gap:1.3rem;
+    margin-left:1rem;
+}
+.logo p{
+    font-size:25px;
+    font-weight:600;
+    cursor:pointer;
+}
+.logo span{
+    font-weight:750;
+    cursor:pointer;
+}
+.logo p:nth-child(1):hover::before{
+    cursor:pointer;
+}
+.authbutton button{
+    padding:9px 15px;
+    border-radius:18px;
+    border:0;
+    cursor:pointer;
+    font-size:15px;
+    font-weight:450;
+}
+.authbutton button:nth-child(1){
+    background-color: white;
+    color:Black;
+}
+.authbutton button:nth-child(2){
+    background-color:Black;
+    color:white;
+}
+.authbutton button:nth-child(1):hover{
+    background-color:ghostwhite;
+}
+.authbutton button:nth-child(2):hover{
+    background-color: rgba(100, 100, 100, 0.836)
+}
+.banner{
+    background-image:url('./image.jpg');
+    height:100vh;
+    width:100vw;
+    background-size: cover;
+}
+.search-container{
+    position:absolute;
+    top:380px;
+    left:40px;
+}
+.search-container h1{
+    font-size:56px;
+}
+.search-inputs{
+    display:flex;    
+    padding-top:3rem;
+    gap:0.6rem;
+    width:100%;
+}
+.search-inputs div:nth-child(1){
+    display:flex;
+    justify-content:space-around;
+    width:554px;
+    background-color:white;
+    border:0;
+}
+.search-inputs div{
+   cursor:default;
+   font-size:20px;
+   font-weight:500px;
+}
+.search-inputs input{
+    flex:1;
+    padding:1.1rem;
+    outline:0;
+    border:0;
+    font-size:18px;
+    font-weight:600;
+    padding-left:36px;
+}
+.search-inputs input:focus{
+    border-bottom: 4px solid midnightblue;
+}
+select{
+    padding:1.1rem;
+    border:0;
+    outline:0;
+    font-size:20px;
+    max-width:220px;
+    font-weight:500;
+}
+i{
+    font-size:22px;
+    position: absolute;
+    top:142px; 
+}
+option{
+    font-size:20px;
+    font-weight:500;
+}
+option:hover{
+    background-color:white;
+}
+.search-inputs button{
+    background-color:black;
+    color:white;
+    border-radius:10px;
+    padding:1rem;
+    font-size:20px;
+    width:150px;
+    padding:1.1rem;
+    font-weight:550;
+    border:0;
+}
+.search-inputs button:hover{
+    background-color: rgb(100,100,100,0.836);
+}
+.sign{
+    position:absolute;
+    top:585px;
+    left:40px;
+}
+.sign p{
+    font-size:18px;
+    font-weight:500;
+}
+.sign a{
+    color:black;
+    font-size:16px;
+    font-weight:500;
+}
+.img{
+    display:flex;
+    justify-content:space-around;
+    margin-top:5rem;
+}
+img{
+    height:330px;
+    width:500px;
+}
+.feed,.your,.uber{
+    display:flex;
+    flex-direction:column;
+    gap:0.6rem;
+}
+:is(.feed,.your,.uber) a:nth-child(2){
+    font-size:32px;
+    text-decoration:none;
+    color:black;
+    font-weight:670;
+}
+:is(.feed,.your,.uber) a:nth-child(3){
+    color:black;
+    font-size:20px;
+    font-weight:600;
+}
+#city{
+    margin-top:130px;
+    margin-left:45px;
+}

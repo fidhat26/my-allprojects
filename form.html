@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My form</title>
+</head>
+<body>
+    <h3 style="color:red;text-align:center;">Personal Details</h3>
+    <form style="text-align:center;">
+        <label for="name">Name:</label>
+        <input type="text" id="name">
+        <br><br>
+        <label for="pass">Password:</label>
+        <input type="password" id="pass" required>
+        <br><br>
+        <label for="mail">E-mail id:</label>
+        <input type="email" id="mail" required>
+        <br><br>
+        <label>Gender:</label>
+        <input type="radio" id="r1" name="gender">
+        <label for="r1">Male</label>
+        <input type="radio" id="r2" name="gender">
+        <label for="r2">Female</label>
+        <br><br>
+        <label for="contact">Contact:</label>
+        <input type="number" id="contact">
+        <br>
+        <h3 style="color:red;text-align:center;">Educational Qualification</h3>
+        <label for="">Degree:</label>
+        <select>
+            <option>--Select Group--</option>
+            <option>BSc CS</option>
+            <option>BSc Maths</option>
+            <option>BA English</option>
+            <option>BCA</option>
+        </select>
+        <br><br>
+        <label for="">Engineering:</label>
+        <select>
+            <option>--Select Group--</option>
+            <option>Btech CS</option>
+            <option>Btech Electronics</option>
+            <option>Btech Robotics</option>
+            <option>Btech Mechanics</option>
+        </select>
+        <br><br>
+        <label for="">Hobbies:</label>
+        <input type="checkbox" id="x1">
+        <label for="x1">Playing Chess</label>
+        <input type="checkbox" id="x2">
+        <label for="x2">Reading Books</label>
+        <br>
+        <h3 style="color:red;text-align:center;">Address</h3>
+        <textarea row="10" col="30"></textarea>
+        <br><br>
+        <label for="n1">Attch Resume:</label>
+        <input type="file" id="n1" required>
+        <br><br>
+        <input type="Submit">
+        <input type="Reset">
+    </form> 
+</body>
+</html>

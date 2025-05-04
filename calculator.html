@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scientific Calculator</title>
+    <link rel="stylesheet" href="./calc.css">
+    <link rel="icon" href="Icons/calcq.png" >
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <div class="container">
+        <div id="display">0</div>
+        <div class="fr">
+            <div class="one"  style="background-color: rgb(0,128,100);"  onclick="applyFunction('sqrt')">&Sqrt;</div>
+            <div class="one"  style="background-color: rgb(0,128,100);"  onclick="applyFunction('sin')">sin</div>
+            <div class="one"  style="background-color: rgb(0,128,100);"  onclick="applyFunction('cos')">cos</div>
+            <div class="one"  style="background-color: rgb(0,128,100);"  onclick="applyFunction('tan')">tan</div>
+            <div class="one"  style="background-color: rgb(0,128,100);"  onclick="appendSymbol('&pi;')">&pi;</div>
+        </div>
+        <div class="sec">
+            <div class="two" style="background-color: rgb(255, 0, 76);" onclick="clearDisplay()">C</div>
+            <div class="two" style="background-color: brown;"  onclick="append('.')">&dot;</div>
+            <div class="three" style="background-color: brown;" onclick="append('%')">%</div>
+            <div class="two" style="background-color: brown;" onclick="append('/')">&#247;</div>
+        </div>
+        <div class="trd">
+            <div class="three" style="background-color: rgb(0, 37, 139);" onclick="append('7')">7</div>
+            <div class="three" style="background-color: rgb(0, 37, 139);" onclick="append('8')">8</div>
+            <div class="three" style="background-color: rgb(0, 37, 139);" onclick="append('9')">9</div>
+            <div class="three" style="background-color: brown;"  onclick="append('*')">&Cross;</div>
+        </div>
+        <div class="fou">
+            <div class="four" style="background-color: rgb(0, 37, 139);"  onclick="append('4')">4</div>
+            <div class="four" style="background-color: rgb(0, 37, 139);"  onclick="append('5')">5</div>
+            <div class="four" style="background-color: rgb(0, 37, 139);"  onclick="append('6')">6</div>
+            <div class="four" style="background-color: brown;"  onclick="append('-')">&minus;</div>
+        </div>
+        <div class="last">
+            <div class="dc">
+                <div class="fif">
+                    <div class="five"  style="background-color: rgb(0, 37, 139);" onclick="append('1')">1</div>
+                    <div class="five" style="background-color: rgb(0, 37, 139);"  onclick="append('2')">2</div>
+                    <div class="five" style="background-color: rgb(0, 37, 139);"  onclick="append('3')">3</div>
+                </div>
+                <div class="zero">
+                   <div id="six"  style="background-color:rgb(0,37,139);"  onclick="append('0')">0</div>
+                   <div id="seven" style="background-color: brown;"  onclick="calculate()">=</div>
+                </div>
+            </div>
+            <div id="plus"  style="background-color: brown;"  onclick="append('+')">+</div>
+        </div>
+    </div>
+
+
+
+    <script>
+        const display =  document.getElementById('display');
+
+        function append(value){
+            if (display.textContent === '0'){
+                display.textContent = value;
+            }else{
+                display.textContent += value;
+            }
+        }
+
+        function clearDisplay(){
+            display.textContent = '0';
+        }
+
+        function calculate(){
+            try{
+                const result = eval(display.textContent);
+                display.textContent = result;
+            }catch (error){
+                display.textContent = 'Error';
+            }
+        }
+
+        function appendSymbol(symbol){
+            if(symbol === '&pi;'){
+                append(Math.PI.toFixed(8));
+            }
+        }
+
+        function applyFunction(func){
+            try{
+                const value = parseFloat(display.textContent);
+                let result;
+                switch(func){
+                    case 'sin':
+                        result = Math.sin(toRadians(value));
+                        break;
+                    case 'cos':
+                        result = Math.cos(toRadians(value));
+                        break;
+                    case 'tan':
+                        result = Math.tan(toRadians(value));
+                        break;
+                    case 'sqrt':
+                        result = Math.sqrt(value);
+                        break;
+                }
+                display.textContent = result;
+            }catch (error){
+                display.textContent = 'Error';
+            }
+        }
+
+        function toRadians(degrees){
+            return degrees * (Math.PI/180);
+        }
+    </script>
+</body>
+</html>

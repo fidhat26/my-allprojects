@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My practice</title>
+    <link rel="stylesheet" href="example.css">
+</head>
+<body>
+    <header>
+        <div class="second">
+            <p>56</p>
+            <p id="demo">Hello world &#60; &#128514;</p>
+        </div>
+
+        <div class="third">
+            <button type="button" onclick="change()">Click</button>
+        </div>
+        </div>  
+    </header>
+    <script>
+        function change(){
+            document.getElementById("demo").style.color = "red";
+        }
+    </script>
+    <canvas id="re" height="20px" width="10px" style="border:1px solid black;"></canvas>
+    <div id="fr" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+    <img id="drag" src="./easetrip.png" draggable="true" ondragstart="drag(event)" height="60px">
+    <script>
+        function allowDrop(ev) {
+            ev.preventDefault();
+        }
+        function drag(ev) {
+            ev.dataTransfer.setData("text", ev.target.id);
+        }
+        function drop(ev) {
+            ev.preventDefault();
+            var data = ev.dataTransfer.getData("text");
+            ev.target.appendChild(document.getElementById(data));
+        }
+    </script>
+    <p class="j4">rnu5n</p>
+    <div class="bv">ghgjkj</div>
+    <div id="jh"></div>
+</body>
+</html>

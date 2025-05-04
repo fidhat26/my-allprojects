@@ -1,0 +1,28 @@
+body{
+    margin:0;
+    background-color:rgb(25, 76, 89);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    height:100vh;
+    width:100vw;
+}
+
+
+.circle{
+    width:40px;
+    height:40px;
+    border:3px solid gray;
+    border-top:3px solid  purple; 
+    border-radius:50%;
+    animation:spin 3s linear infinite;
+}
+
+@keyframes spin{
+    from{
+       transform:rotate(0deg);
+    }
+    to{
+        transform:rotate(360deg);
+    }
+}
