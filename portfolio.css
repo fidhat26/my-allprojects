@@ -353,7 +353,7 @@ form i{
     gap:0.4rem;
 }
 #m i{
-    padding-top: 1rem;
+    margin-top:15px;
 }
 footer{
     display:flex;
@@ -366,10 +366,8 @@ footer{
 
 
 @media screen and (max-width: 600px) {
-    #navigation {
-        flex-direction: column;
-        padding-right: 0;
-        align-items: center;
+    #nav{
+        display:none;
     }
 
     #navigation span {
@@ -377,35 +375,45 @@ footer{
         top: 20px;
         left: 20px;
     }
-
-    #nav {
-        gap: 1rem;
-        flex-direction: column;
-        align-items: center;
-        position: static;
+    #rg #comptr{
+        font-size: 15px;
+        line-height: 16px;
     }
-
-    #rg {
-        flex-direction: column;
-        align-items: center;
-        gap: 2rem;
+    #rg i{
+        font-size: 18px;
     }
-
-    #pic img {
-        height: auto;
-        width: 90%;
-        margin: 0;
+    #pic img{
+        display: none;
     }
-
+    .stud span, #name{
+        font-size: 40px;
+    }
+    .stud{
+        background-image: url('Icons/me1-removebg-preview.png');
+        background-repeat: no-repeat;
+        background-size: contain;
+        height: 180px;
+    }
     .stud, .stud p, .stud span {
-        font-size: 30px;
         margin-left: 20px;
         padding-top: 1rem;
     }
+    #about{
+        margin-top: -70px;
+    }
 
-    #about h2, #about span, #about p, #about button {
+    #about h2, #about span, #about p{
         padding-left: 20px;
         padding-right: 20px;
+    }
+    #about button{
+        font-size: 17px;
+    }
+    #about span{
+        font-size: 28px;
+    }
+    #about p{
+        font-size: 26px;
     }
     #skill{
         align-items: center;
@@ -420,11 +428,8 @@ footer{
         width:300px;
     }
 
-
-    #tool div {
-        margin-left: 0;
-        justify-content: center;
-        flex-wrap: wrap;
+    #tool {
+       display: none;
     }
 
     #project div {
@@ -436,49 +441,14 @@ footer{
     form input, form button {
         width: 90%;
     }
-
-    form i {
-        left: 50%;
-        transform: translateX(-50%);
+    #sub{
+        width:90%;
     }
 
     #m {
-        flex-direction: column;
-        align-items: center;
+        font-size:13px;
     }
-}
-@media screen and (max-width: 1024px) and (min-width: 601px) {
-    #rg {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    #pic img {
-        width: 90%;
-        height: auto;
-    }
-
-    .stud {
-        font-size: 35px;
-        margin-left: 50px;
-    }
-
-    #about h2, #about span, #about p, #about button {
-        padding-left: 50px;
-        padding-right: 50px;
-    }
-
-    #tool div {
-        margin-left: 0;
-        justify-content: center;
-    }
-
-    #project div {
-        flex-wrap: wrap;
-        gap: 2rem;
-    }
-
-    form input, form button {
-        width: 90%;
+    footer{
+        font-size:16px;
     }
 }
