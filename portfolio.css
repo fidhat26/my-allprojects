@@ -266,8 +266,6 @@ html{
     line-height: 26px;
     position:relative;
     top:-42px;
-    display: flex;
-    flex-wrap: wrap;
 }
 #project img{
     height:170px;
@@ -380,22 +378,65 @@ footer{
     #rg #comptr{
         font-size: 15px;
         line-height: 16px;
+        color:#8c3bf6;
+        font-weight: 600;
     }
     #rg i{
         font-size: 18px;
+        padding:40px;
+        background: linear-gradient(90deg, #3e3bf6,rgb(189, 130, 238));
+        -webkit-background-clip:text;
+        -webkit-text-fill-color:transparent;
+        background-clip: text;
+        color:transparent;
     }
-    #pic img{
-        display: none;
-    }
+   
     .stud span, #name{
         font-size: 40px;
     }
-    .stud{
-        background-image: url('Icons/me1-removebg-preview.png');
-        background-repeat: no-repeat;
-        background-size: contain;
-        height: 180px;
-    }
+     #rg{
+        position:relative;
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        min-height:370px;
+        text-align:center;
+        overflow:hidden;
+        margin-top: 60px;
+     }
+     #pic{
+        position:relative;
+        z-index: 1;
+     }
+     #pic img{
+        width:100%;
+        max-width:400px;
+        height:400px;
+        display:block;
+        margin-top:-140px;
+     }
+     .stud{
+        position:absolute;
+        top:42%;
+        left:50%;
+        transform:translate(-50%, -50%);
+        z-index: 2;
+        padding:20px;
+        border-radius:12px;
+        width:90%;
+        max-width:500px;
+        margin-top:150px;
+        padding-right:60px;
+        line-height:2rem;
+     }
+     .stud div{
+        gap:1rem;
+     }
+     #gt, #am{
+        position:relative;
+        top:30px;
+     }
     .stud, .stud p, .stud span {
         margin-left: 20px;
         padding-top: 1rem;
@@ -416,6 +457,13 @@ footer{
     }
     #about p{
         font-size: 26px;
+    }
+    h2, h1{
+        font-size:30px;
+    }
+    #about h2{
+        text-decoration:underline solid 5px #3e3bf6; 
+        text-underline-offset: 1rem; 
     }
     #skill{
         align-items: center;
@@ -452,5 +500,21 @@ footer{
     }
     footer{
         font-size:16px;
+    }
+    #am, #name , #gt{
+       color:beige;
+       animation:glow 2s ease-in-out infinite;
+       text-shadow: 0 0 10px rgb(189, 130, 238), 0 0 20px rgb(189, 130, 238), 0 0 30px rgb(189, 130, 238);
+    }
+    @keyframes glow{
+        0%{
+            text-shadow: 0 0 5px rgb(189, 130, 238) , 0 0 10px rgb(189, 130, 238) 0 0 15px rgb(189, 130, 238);
+        }
+        50%{
+            text-shadow: 0 0 20px rgb(189, 130, 238) , 0 0 30px rgb(189, 130, 238), 0 0 40px rgb(189, 130, 238);
+        }
+        100%{
+            text-shadow: 0 0 5px rgb(189, 130, 238) , 0 0 10px rgb(189, 130, 238), 0 0 15px rgb(189, 130, 238);
+        }
     }
 }
