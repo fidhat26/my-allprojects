@@ -66,7 +66,7 @@ html{
 #pic img{
     height:700px;
     width:600px;
-    margin:20px 130px 0px 0px;
+    margin:20px 60px 0px 0px;
 }
 .stud{
     font-size:40px;
@@ -226,7 +226,7 @@ html{
     justify-content: center;
     gap:0.1rem;
     height:330px;
-    width:400px;
+    width:370px;
     background-color: rgba(128, 128, 128, 0);
     border-radius:10px;
     box-shadow: rgba(49, 93, 144, 0.541) -2px 2px 5px 1px;
@@ -266,10 +266,12 @@ html{
     line-height: 26px;
     position:relative;
     top:-42px;
+    display: flex;
+    flex-wrap: wrap;
 }
 #project img{
     height:170px;
-    width:390px;
+    width:360px;
     border-radius: 10px 10px 0px 0px;
     margin-left:5px;
     margin-top:5px;
