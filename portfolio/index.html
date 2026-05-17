@@ -201,7 +201,14 @@
     </footer>
 
 
+    <script>
+    const menuIcon = document.getElementById('menu-icon');
+    const navbar = document.getElementById('nav');
 
+    menuIcon.addEventListener('click', ()=>{
+        navbar.classList.toggle('show-nav');
+    });
+    </script>
 
     <script>
         const sections = document.querySelectorAll('.section');

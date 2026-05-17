@@ -31,7 +31,6 @@ html{
     display: none;
     color: white;
     font-size: 30px;
-    position: fixed;
     font-weight: 400;
     right: 20px;
     top: 20px;
@@ -46,8 +45,8 @@ html{
     transition:0.4s;
 }
 #nav a.active-now{
-    text-decoration: underline solid 2.5px rgb(189, 130, 238);
-    text-underline-offset:0.7rem;
+    /* text-decoration: underline solid 2.5px rgb(189, 130, 238);
+    text-underline-offset:0.7rem; */
     background: linear-gradient(90deg, #3e3bf6,rgb(189, 130, 238));
     -webkit-background-clip:text;
     -webkit-text-fill-color:transparent;
@@ -61,8 +60,8 @@ html{
     z-index: 1000;
 }
 #nav a:hover{
-    text-decoration: underline solid 2.5px rgb(189, 130, 238);
-    text-underline-offset:0.7rem;
+    /* text-decoration: underline solid 2.5px rgb(189, 130, 238);
+    text-underline-offset:0.7rem; */
     background: linear-gradient(90deg, #3e3bf6,rgb(189, 130, 238));
     -webkit-background-clip:text;
     -webkit-text-fill-color:transparent;
@@ -373,10 +372,9 @@ footer{
 
 /* TABLET */
 @media screen and (max-width: 1024px) {
-    body{
-        /*if not work scroll*/
+    /* body{
         overflow: hidden;
-    }
+    } */
     #navigation{
         padding: 20px;
         justify-content: space-between;
