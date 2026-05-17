@@ -27,6 +27,17 @@ html{
     top:30px;
     left:100px;
 }
+#menu-icon{
+    display: none;
+    color: white;
+    font-size: 30px;
+    position: fixed;
+    font-weight: 400;
+    right: 20px;
+    top: 20px;
+    z-index: 2000;
+    cursor: pointer;
+}
 #nav a{
     font-size:21px;
     text-decoration:none;
@@ -360,86 +371,219 @@ footer{
 }
 
 
-@media screen and (max-width: 600px) {
-    #nav{
-        display:none;
+/* TABLET */
+@media screen and (max-width: 1024px) {
+    body{
+        /*if not work scroll*/
+        overflow: hidden;
     }
+    #navigation{
+        padding: 20px;
+        justify-content: space-between;
+        align-items: center;
+    }
+    #navigation span{
+        position: static;
+        font-size: 24px;
+    }
+    #menu-icon{
+        display: block;
+    }
+    #nav{
+        position: absolute;
+        top: 70px;
+        right: 20px;
+        width: 190px;
+        background: #161622;
+        display: none;
+        flex-direction: column;
+        gap: 1.3rem;
+        padding: 20px;
+        border-radius: 12px;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.4);
+    }
+    #nav.show-nav{
+        display: flex;
+    }
+    #nav a{
+        font-size: 17px;
+    }
+    #pic img{
+        /* display: none; */
+        height: 250px;
+        width:250px;
+    }
+    #pic{
+        height: 265px;
+        width:270px;
+        margin-right: 18px;
+        margin-top: -40px;
+    }
+    #rg{
+        width: 100%;
+        height:auto;
+        margin-top: 50px;
+        justify-content: center;
+        align-items: center;
+    }
+    .stud{
+        width: 100%;
+        height:auto;
+        margin: 0;
+        padding-top: 0;
+        padding-left: 50px;
+    }
+    .stud span, .stud p{
+        font-size: 55px;
+    }
+    #comptr{
+        font-size: 24px;
+        letter-spacing: 1px;
+    }
+    .stud div{
+        /* justify-content: center; */
+        gap: 1rem;
+    }
+    .stud i{
+        font-size: 28px;
+        padding-right: 50px;
+    }
+
+    #about{
+        padding-top: 4rem;
+    }
+    #about h2{
+        padding-left: 30px;
+        font-size: 38px;
+    }
+    #about span{
+        padding-left: 30px;
+        font-size: 24px;
+    }
+    #about p{
+        padding-left: 30px;
+        padding-right: 30px;
+        font-size: 20px;
+        line-height: 34px;
+    }
+    #about button{
+        margin-left: 30px;
+        font-size: 18px;
+    }
+    #skill h1, #project h1, #contact h1{
+        font-size: 40px;
+    }
+
+    .skil{
+        grid-template-columns: repeat(5, 1fr);
+        gap: 40px;
+        padding: 0 20px;
+    }
+    .skil div{
+        width:90px;
+        height:90px;
+        font-size: 12px;
+    }
+    .skil img{
+        width:55px ;
+        height: 55px;
+    }
+
+    #proj{
+        display: flex !important;
+        overflow-x: auto;
+        gap: 20px;
+        padding: 20px;
+        scroll-snap-type: x mandatory;
+    }
+    #proj::-webkit-scrollbar{
+        display: none;
+    }
+    /* .pro{
+        min-width:280px;
+        flex-shrink: 0;
+        scroll-snap-align: center;
+    }
+    #project div div{
+        width: 290px;
+        height: 260px;
+    }
+    #project img{
+        width:280px;
+        height: 125px;
+    }
+
+    #project div div div{
+        width:280px;
+        font-size: 14px;
+    } */
+    #project button{
+        font-size:16px;
+        padding: 0.4rem 1.5rem;
+    }
+
+    form input, form button, #sub{
+        width:60%;
+        font-size: 18px;
+    }
+    #m{
+        font-size: 12px;
+    }
+    #m i{
+        margin-top :15px;
+    }
+    #m div{
+        justify-content: center;
+        padding: 10px;
+    }
+    footer{
+        font-size: 16px;
+        text-align: center;
+        padding: 10px;
+    }
+    
+}
+@media screen and (max-width:800px) {
+    .stud{
+        line-height: 20px;
+    }
+    .stud span, #name{
+        font-size: 40px;
+    }
+    #comptr{
+        font-size: 18px;
+    }
+    .stud i{
+        padding-top: 20px;
+        font-size: 19px;
+    }
+}
+@media screen and (max-width: 600px) {
 
     #navigation span {
         font-size: 20px;
         top: 20px;
         left: 20px;
     }
-    #rg #comptr{
-        font-size: 15px;
-        line-height: 16px;
-        color:#8c3bf6;
-        font-weight: 600;
+    #menu-icon{
+        font-size: 25px;
     }
-    #rg i{
-        font-size: 18px;
-        padding:40px;
-        background: linear-gradient(90deg, #3e3bf6,rgb(189, 130, 238));
-        -webkit-background-clip:text;
-        -webkit-text-fill-color:transparent;
-        background-clip: text;
-        color:transparent;
+    #pic{
+        display: none;
     }
-   
+    .stud{
+        line-height: 10px;
+    }
     .stud span, #name{
         font-size: 40px;
     }
-     #rg{
-        position:relative;
-        display:flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        min-height:370px;
-        text-align:center;
-        overflow:hidden;
-        margin-top: 60px;
-     }
-     #pic{
-        position:relative;
-        z-index: 1;
-     }
-     #pic img{
-        width:100%;
-        max-width:400px;
-        height:400px;
-        display:block;
-        margin-top:-140px;
-     }
-     .stud{
-        position:absolute;
-        top:42%;
-        left:50%;
-        transform:translate(-50%, -50%);
-        z-index: 2;
-        padding:20px;
-        border-radius:12px;
-        width:90%;
-        max-width:500px;
-        margin-top:150px;
-        padding-right:60px;
-        line-height:2rem;
-     }
-     .stud div{
-        gap:1rem;
-     }
-     #gt, #am{
-        position:relative;
-        top:30px;
-     }
-    .stud, .stud p, .stud span {
-        margin-left: 20px;
-        padding-top: 1rem;
+    #rg i{
+        font-size: 19px;
     }
-    #about{
-        margin-top: -70px;
+    #about h2,#project h1, #contact h1, #skill h1{
+        font-size: 29px;
+        font-weight: 500;
     }
-
     #about h2, #about span, #about p{
         padding-left: 20px;
         padding-right: 20px;
@@ -448,68 +592,55 @@ footer{
         font-size: 17px;
     }
     #about span{
-        font-size: 28px;
+        font-size: 18px;
+        font-weight: 600;
     }
     #about p{
-        font-size: 26px;
-    }
-    h2, h1{
-        font-size:30px;
+        font-size: 18px;
+        padding-right:30px ;
     }
     #about h2{
-        text-decoration:underline solid 5px #3e3bf6; 
-        text-underline-offset: 1rem; 
+        text-decoration:underline solid 2px #3e3bf6; 
+        text-underline-offset: 10px; 
     }
-    #skill{
-        align-items: center;
-        justify-content: center;
-        margin:0;
-        padding:0;
+    .skil{
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(5, 120px);
+        gap: 22px;
     }
-    .fd div:nth-child(2){
-        width:300px;
+    .skil div{
+        height: 80px;
+        width: 80px;
+        font-size: 11px;
     }
-    .fd div:nth-child(1){
-        width:300px;
+    .pro{
+        min-width: 310px;
     }
-
-    #tool {
-       display: none;
+    #project img{
+        width: 300px;
     }
-
-    #project div {
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
+    #project div div div{
+        font-size: 15px;
+    }
+    #project button{
+        font-size: 13px;
     }
 
     form input, form button {
-        width: 90%;
+        width: 60%;
+        height: 40px;
+        font-size: 14px;
     }
     #sub{
-        width:90%;
+        width:60%;
+        font-size: 14px;
     }
 
     #m {
-        font-size:13px;
+        font-size:10px;
+        gap: 3px;
     }
     footer{
-        font-size:16px;
-    }
-    #am, #name , #gt{
-       color:beige;
-       animation:glow 2s ease-in-out infinite;
-       text-shadow: 0 0 10px rgb(189, 130, 238), 0 0 20px rgb(189, 130, 238), 0 0 30px rgb(189, 130, 238);
-    }
-    @keyframes glow{
-        0%{
-            text-shadow: 0 0 5px rgb(189, 130, 238) , 0 0 10px rgb(189, 130, 238) 0 0 15px rgb(189, 130, 238);
-        }
-        50%{
-            text-shadow: 0 0 20px rgb(189, 130, 238) , 0 0 30px rgb(189, 130, 238), 0 0 40px rgb(189, 130, 238);
-        }
-        100%{
-            text-shadow: 0 0 5px rgb(189, 130, 238) , 0 0 10px rgb(189, 130, 238), 0 0 15px rgb(189, 130, 238);
-        }
+        font-size:12px;
     }
 }
