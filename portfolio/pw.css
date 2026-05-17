@@ -556,6 +556,7 @@ footer{
         font-size: 19px;
     }
 }
+/*Phone*/
 @media screen and (max-width: 600px) {
 
     #navigation span {
